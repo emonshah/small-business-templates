@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Small Business Templates by Emon Shah</title>
+  <style>
+    :root {
+      --primary: #FF9E0B;
+      --primary-dark: #E68A00;
+      --primary-light: #FFF3E0;
+      --secondary: #1A1A1D;
+      --light: #FFFFFF;
+      --light-gray: #FAFBFD;
+      --text: #4A5568;
+      --text-light: #718096;
+      --transition: all 0.3s ease;
+      --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      --box-shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.08);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+
+    body {
+      background-color: var(--light-gray);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--primary);
+      color: var(--light);
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    header h1 {
+      font-size: 2rem;
+    }
+
+    header p {
+      font-size: 1rem;
+      color: var(--light);
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 2rem 1rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--light);
+      border-radius: 10px;
+      box-shadow: var(--box-shadow);
+      transition: var(--transition);
+      padding: 1.5rem;
+    }
+
+    .card:hover {
+      box-shadow: var(--box-shadow-hover);
+    }
+
+    .card h3 {
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+      color: var(--secondary);
+    }
+
+    .card a {
+      display: inline-block;
+      margin-right: 10px;
+      margin-top: 10px;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      background: var(--primary);
+      color: var(--light);
+      transition: var(--transition);
+    }
+
+    .card a:hover {
+      background: var(--primary-dark);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: var(--text-light);
+      background: var(--light);
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: var(--primary-dark);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Small Business Templates</h1>
+    <p>Ready-to-use HTML templates for small business demo websites</p>
+  </header>
+
+  <main class="container">
+    <div class="card">
+      <h3>Home Cleaning Service</h3>
+      <a href="/home-cleaning-service/" target="_blank">Live Demo</a>
+      <a href="https://github.com/emonshah/small-business-templates/tree/main/home-cleaning-service" target="_blank">Source Code</a>
+    </div>
+
+    <div class="card">
+      <h3>Local Plumber Site</h3>
+      <a href="/local-plumber-site/" target="_blank">Live Demo</a>
+      <a href="https://github.com/emonshah/small-business-templates/tree/main/local-plumber-site" target="_blank">Source Code</a>
+    </div>
+
+    <div class="card">
+      <h3>Family Doctor Clinic</h3>
+      <a href="/family-doctor-clinic/" target="_blank">Live Demo</a>
+      <a href="https://github.com/emonshah/small-business-templates/tree/main/family-doctor-clinic" target="_blank">Source Code</a>
+    </div>
+
+    <div class="card">
+      <h3>Beauty Salon Site</h3>
+      <a href="/beauty-salon-site/" target="_blank">Live Demo</a>
+      <a href="https://github.com/emonshah/small-business-templates/tree/main/beauty-salon-site" target="_blank">Source Code</a>
+    </div>
+
+    <div class="card">
+      <h3>Cafe Website Template</h3>
+      <a href="/cafe-website-template/" target="_blank">Live Demo</a>
+      <a href="https://github.com/emonshah/small-business-templates/tree/main/cafe-website-template" target="_blank">Source Code</a>
+    </div>
+  </main>
+
+  <footer>
+    Created with ❤️ by <a href="https://github.com/emonshah" target="_blank">Emon Shah</a>
+  </footer>
+</body>
+</html>
