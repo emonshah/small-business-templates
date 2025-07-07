@@ -1,0 +1,9 @@
+{
+  "name": "Local Plumber Site",
+  "folder": "local-plumber-site",
+  "category": "food",
+  "features": ["gallery", "contact"],
+  "layout": "single",
+  "image": "local-plumber-site/thumbnail.jpg",
+  "description": "Perfect template for small plumber and coffee shops"
+}
