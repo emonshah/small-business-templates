@@ -1,0 +1,9 @@
+{
+  "name": "Home Cleaning Service",
+  "folder": "home-cleaning-service",
+  "category": "cleaning",
+  "features": ["booking", "contact"],
+  "layout": "single",
+  "image": "home-cleaning-service/thumbnail.jpg",
+  "description": "A simple service template"
+}
