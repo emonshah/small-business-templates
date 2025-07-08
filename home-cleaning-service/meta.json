@@ -4,6 +4,6 @@
   "category": "cleaning",
   "features": ["booking", "contact"],
   "layout": "single",
-  "image": "home-cleaning-service/thumbnail.jpg",
+  "image": "home-cleaning-service/thumbnail.png",
   "description": "A simple service template"
 }
