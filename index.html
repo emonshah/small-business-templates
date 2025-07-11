@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -1871,8 +1871,7 @@
                             const layoutMatch = readmeText.match(/Layout: (.+)/);
                             const layout = layoutMatch ? layoutMatch[1] : "Unknown";
 
-                            const imageMatch = readmeText.match(/!\[Screenshot\]\((.+)\)/);
-                            const image = imageMatch ? `https://raw.githubusercontent.com/emonshah/small-business-templates/main/${folder.name}/${imageMatch[1]}` : `https://via.placeholder.com/600x400?text=${folder.name.replace(/-/g, '+')}`;
+                            const image = `https://raw.githubusercontent.com/emonshah/small-business-templates/main/${folder.name}/thumbnail.png`;
 
                             return {
                                 name,
@@ -1942,7 +1941,7 @@
                 
                 card.innerHTML = `
                     <div class="card-image">
-                        <img src="${template.image}" alt="${template.name}">
+                        <img src="${template.image}" alt="${template.name}" onerror="this.onerror=null;this.src='https://via.placeholder.com/600x400?text=${template.name.replace(/ /g, '+')}';">
                         <span class="category-badge">${template.category}</span>
                     </div>
                     <div class="card-content">
