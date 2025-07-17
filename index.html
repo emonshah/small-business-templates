@@ -1,4 +1,4 @@
-   <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -1825,7 +1825,8 @@ function renderTemplates() {
         card.innerHTML = `
             <div class="card-image">
                 <img src="${template.image}" alt="${template.name}" onerror="this.onerror=null;this.src='https://via.placeholder.com/600x400?text=${template.name.replace(/ /g, '+')}'">
-                <span class="category-badge">${template.category}</span>
+               <span class="category-badge">${template.category.charAt(0).toUpperCase() + template.category.slice(1)}</span>
+
             </div>
             <div class="card-content">
                 <h3>${template.name}</h3>
