@@ -1649,6 +1649,11 @@
     </footer>
 
     <!-- Modal Form -->
+    <!-- Modal Form -->
+    <div class="form-message-container" id="form-message-container">
+        <i id="form-message-icon"></i>
+        <p id="form-message-text"></p>
+    </div>
     <div class="modal-overlay" id="modal-overlay">
         <div class="modal-content">
             <span class="close-modal" id="close-modal">&times;</span>
@@ -1660,6 +1665,7 @@
             </div>
 
             <form id="contact-form">
+                <input type="hidden" name="form_type" id="form_type" value="general_inquiry">
                 <div class="form-group">
                     <label for="name">Full Name</label>
                     <input type="text" id="name" placeholder="Your name" required>
@@ -1693,8 +1699,6 @@
             </form>
         </div>
     </div>
-
-
 
 
     <!-- Scripts -->
@@ -1943,7 +1947,7 @@
             const sourceText = document.getElementById('source-text');
             const modalTitle = document.getElementById('modal-title');
             const modalSubtitle = document.getElementById('modal-subtitle');
-
+            const contactForm = document.getElementById('contact-form');
 
             function openModal(source) {
                 sourceText.textContent = source;
@@ -1975,55 +1979,49 @@
 
 
             // Form submission with API POST request
+            if (contactForm) {
+                contactForm.addEventListener('submit', async function (e) {
+                    e.preventDefault();
 
-            document.addEventListener('DOMContentLoaded', () => {
-                const contactForm = document.getElementById('contact-form');
+                    const name = document.getElementById('name').value;
+                    const email = document.getElementById('email').value;
+                    const service = document.getElementById('service').value;
+                    const message = document.getElementById('message').value;
+                    const formType = document.getElementById('form_type').value;
 
-                if (contactForm) {
-                    // Form submission with API POST request
-                    contactForm.addEventListener('submit', async function (e) {
-                        e.preventDefault();
+                    const formData = {
+                        name,
+                        email,
+                        service,
+                        message,
+                        form_type: formType
+                    };
 
-                        const formData = new FormData(contactForm);
-                        const data = {};
-                        formData.forEach((value, key) => {
-                            data[key] = value;
+                    try {
+                        const response = await fetch('https://emonshah.com/api/admin/user', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify(formData)
                         });
 
-                        // Add a form_type field manually
-                        data.form_type = 'contact_form';
-
-                        try {
-                            const response = await fetch('https://emonshah.com/api/admin/user', {
-                                method: 'POST',
-                                headers: {
-                                    'Content-Type': 'application/json',
-                                    'Accept': 'application/json'
-                                },
-                                body: JSON.stringify(data)
-                            });
-
-                            if (response.ok) {
-                                const result = await response.json();
-                                alert('✅ Thank you! Your information has been submitted successfully.');
-                                contactForm.reset();
-                                if (typeof closeModalFunc === 'function') {
-                                    closeModalFunc();
-                                }
-                                console.log("Server Response:", result);
-                            } else {
-                                const resData = await response.json();
-                                alert('❌ Submission failed: ' + (resData.message || 'Unknown error'));
-                                console.warn('Server Error Response:', resData);
-                            }
-                        } catch (error) {
-                            console.error('❌ Error submitting form:', error);
-                            alert('⚠️ An error occurred. Please try again later.');
+                        if (response.ok) {
+                            const result = await response.json();
+                            showFormMessage('success', 'Success! Your request has been submitted. We will contact you shortly.');
+                            contactForm.reset(); // Clear the form
+                            closeModalFunc();
+                        } else {
+                            const errorData = await response.json();
+                            showFormMessage('error', `Error: ${errorData.message || 'Something went wrong. Please try again.'}`);
                         }
-                    });
-                }
-            });
+                    } catch (error) {
+                        console.error('Submission error:', error);
+                        alert('Network error or server is unreachable. Please try again later.');
+                    }
+                });
 
+            }
 
 
 
