@@ -1,9 +1,12 @@
+ 
 {
   "name": "Home Cleaning Service",
   "folder": "home-cleaning-service",
-  "category": "cleaning",
+  "category": "Cleaning",
   "features": ["booking", "contact"],
   "layout": "single",
   "image": "home-cleaning-service/thumbnail.png",
-  "description": "A simple service template"
+  "description": "A simple service template for home cleaning",
+  "liveDemo": "https://demo.emonshah.com/home-cleaning-service/",
+  "sourceCode": "https://github.com/emonshah/small-business-templates/tree/main/home-cleaning-service"
 }
