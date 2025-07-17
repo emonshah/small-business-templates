@@ -1943,7 +1943,7 @@
             const sourceText = document.getElementById('source-text');
             const modalTitle = document.getElementById('modal-title');
             const modalSubtitle = document.getElementById('modal-subtitle');
-            const contactForm = document.getElementById('contact-form');
+
 
             function openModal(source) {
                 sourceText.textContent = source;
@@ -1976,35 +1976,51 @@
 
             // Form submission with API POST request
 
-            contactForm.addEventListener('submit', async function (e) {
-                e.preventDefault();
+            document.addEventListener('DOMContentLoaded', () => {
+                const contactForm = document.getElementById('contact-form');
 
-                const formData = new FormData(contactForm);
-                const data = {};
-                formData.forEach((value, key) => {
-                    data[key] = value;
-                });
+                if (contactForm) {
+                    // Form submission with API POST request
+                    contactForm.addEventListener('submit', async function (e) {
+                        e.preventDefault();
 
-                try {
-                    const response = await fetch('https://emonshah.com/api/admin/user', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify(data)
+                        const formData = new FormData(contactForm);
+                        const data = {};
+                        formData.forEach((value, key) => {
+                            data[key] = value;
+                        });
+
+                        // Add a form_type field manually
+                        data.form_type = 'contact_form';
+
+                        try {
+                            const response = await fetch('https://emonshah.com/api/admin/user', {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                    'Accept': 'application/json'
+                                },
+                                body: JSON.stringify(data)
+                            });
+
+                            if (response.ok) {
+                                const result = await response.json();
+                                alert('✅ Thank you! Your information has been submitted successfully.');
+                                contactForm.reset();
+                                if (typeof closeModalFunc === 'function') {
+                                    closeModalFunc();
+                                }
+                                console.log("Server Response:", result);
+                            } else {
+                                const resData = await response.json();
+                                alert('❌ Submission failed: ' + (resData.message || 'Unknown error'));
+                                console.warn('Server Error Response:', resData);
+                            }
+                        } catch (error) {
+                            console.error('❌ Error submitting form:', error);
+                            alert('⚠️ An error occurred. Please try again later.');
+                        }
                     });
-
-                    if (response.ok) {
-                        alert('Thank you! Your information has been submitted successfully.');
-                        contactForm.reset();
-                        closeModalFunc();
-                    } else {
-                        const resData = await response.json();
-                        alert('Submission failed: ' + (resData.message || 'Unknown error'));
-                    }
-                } catch (error) {
-                    console.error('Error submitting form:', error);
-                    alert('An error occurred. Please try again later.');
                 }
             });
 
