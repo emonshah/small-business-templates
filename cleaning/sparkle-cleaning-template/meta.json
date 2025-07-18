@@ -1,11 +1,10 @@
 {
   "name": "Sparkle Cleaning Template",
-  "folder": "sparkle-cleaning-template",
+  "folder": "cleaning/sparkle-cleaning-template",
   "category": "Cleaning",
   "features": ["online booking", "responsive", "seo-friendly"],
   "layout": "multi",
   "image": "cleaning/sparkle-cleaning-template/thumbnail.png",
-  "description": "A modern, multi-page cleaning service website with booking and dedicated service pages.",
-  "liveDemo": "https://demo.emonshah.com/cleaning/sparkle-cleaning-template/",
-  "sourceCode": "https://github.com/emonshah/small-business-templates/tree/main/cleaning/sparkle-cleaning-template"
+  "description": "A modern, multi-page cleaning service website with booking and dedicated service pages."
+ 
 }
