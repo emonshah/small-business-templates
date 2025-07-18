@@ -1777,9 +1777,11 @@
             let allTemplates = [];
             let filteredTemplates = [];
 
-            // Add event listeners to filters
-            if (searchInput && categoryFilter && featuresFilter && layoutFilter) {
-                [searchInput, categoryFilter, featuresFilter, layoutFilter].forEach(filter => {
+
+            
+                 // Add event listeners to filters
+            if (searchInput && categoryFilter && layoutFilter) {
+                [searchInput, categoryFilter, layoutFilter].forEach(filter => {
                     filter.addEventListener('change', filterTemplates);
                 });
                 searchInput.addEventListener('keyup', filterTemplates);
@@ -1789,7 +1791,6 @@
                 resetFiltersBtn.addEventListener('click', () => {
                     if (searchInput) searchInput.value = '';
                     if (categoryFilter) categoryFilter.value = 'all';
-                    if (featuresFilter) featuresFilter.value = 'all';
                     if (layoutFilter) layoutFilter.value = 'all';
                     filterTemplates();
                 });
@@ -1811,15 +1812,16 @@
                 });
             }
 
+
             // Populate category filter dropdown
             function populateCategoryFilter(templates) {
                 if (!categoryFilter) return;
                 let categories = [...new Set(templates.map(t => t.category))];
                 // Add user-specified categories
                 const userCategories = [
-                    "Home Cleaning", "Plumbing Services", "Electrician", "Salon & Spa",
-                    "Clinic / Doctor", "Gym & Fitness", "Restaurant / Cafe", "Pet Care",
-                    "Construction", "Coaching Center"
+                    "Cleaning Service", "Beauty/Salon", "Real Estate", "Restaurant / Cafe",
+                    "Plumber / Local Service", "Medical / Clinic", "E-commerce (small)",
+                    "Blog / News", "Landing Page", "Business/Agency", "Misc Templates"
                 ];
                 userCategories.forEach(cat => {
                     if (!categories.includes(cat)) {
@@ -1835,6 +1837,10 @@
                     categoryFilter.appendChild(option);
                 });
             }
+
+
+
+
 
             // Load templates from GitHub
             async function loadTemplates() {
