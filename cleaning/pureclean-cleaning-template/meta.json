@@ -1,6 +1,6 @@
 {
   "name": "PureClean – Premium Cleaning Website",
-  "folder": "pureclean-cleaning-template",
+  "folder": "cleaning/pureclean-cleaning-template",
   "category": "Cleaning",
   "features": ["multi-page", "eco-friendly", "quote form", "commercial and residential"],
   "layout": "multi",
