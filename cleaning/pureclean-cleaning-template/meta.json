@@ -1,0 +1,11 @@
+{
+  "name": "PureClean – Premium Cleaning Website",
+  "folder": "pureclean-cleaning-template",
+  "category": "cleaning",
+  "features": ["multi-page", "eco-friendly", "quote form", "commercial and residential"],
+  "layout": "multi",
+  "image": "cleaning/pureclean-cleaning-template/thumbnail.png",
+  "description": "A professional, multi-page cleaning website for residential and commercial services with quote request, testimonials, and eco-friendly branding.",
+  "liveDemo": "https://demo.emonshah.com/cleaning/pureclean-cleaning-template/",
+  "sourceCode": "https://github.com/emonshah/small-business-templates/tree/main/cleaning/pureclean-cleaning-template"
+}
