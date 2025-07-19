@@ -1,0 +1,17 @@
+{
+  "name": "EliteClean – Eco-Friendly Cleaning Website",
+  "folder": "cleaning/-cleaning-template",
+  "category": "cleaning",
+  "features": [
+    "instant quote calculator",
+    "multi-page",
+    "eco-friendly",
+    "booking form",
+    "team section",
+    "testimonials"
+  ],
+  "layout": "multi",
+  "image": "cleaning/eliteclean-cleaning-template/thumbnail.png",
+  "description": "A feature-rich, eco-friendly, multi-page cleaning service website template with instant pricing calculator, online booking, testimonials, and team section."
+  
+}

@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@700&display=swap');
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #2D3748;
+            background-color: #F7F9FC;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Roboto', sans-serif;
+            letter-spacing: -0.5px;
+            font-weight: 700;
+        }
+        
+        .glass-nav {
+            background: rgba(247, 249, 252, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .card-3d {
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            transform-style: preserve-3d;
+        }
+        
+        .card-3d:hover {
+            transform: perspective(1000px) rotateY(5deg) rotateX(5deg) translateY(-10px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .gradient-overlay {
+            background: linear-gradient(135deg, rgba(26, 109, 130, 0.7), rgba(62, 207, 142, 0.7));
+        }
+        
+        .btn-primary {
+            background: #1A6D82;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background: #155367;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(26, 109, 130, 0.2);
+        }
+        
+        .btn-accent {
+            background: #3ECF8E;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-accent:hover {
+            background: #2EBF7E;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(62, 207, 142, 0.3);
+        }
+        
+        .btn-highlight {
+            background: #FF9E3D;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-highlight:hover {
+            background: #FF8E1D;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 158, 61, 0.3);
+        }
+        
+        .floating-bubble {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .floating-bubble:nth-child(2) {
+            animation-delay: 1s;
+        }
+        
+        .floating-bubble:nth-child(3) {
+            animation-delay: 2s;
+        }
+        
+        .progress-bar {
+            height: 8px;
+            border-radius: 4px;
+            background: #E2E8F0;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: #3ECF8E;
+            border-radius: 4px;
+        }
+        
+        .service-card {
+            transition: all 0.4s ease;
+        }
+        
+        .service-card:hover .card-overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .card-overlay {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.4s ease;
+        }
+        
+        .step-indicator {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            background: #E2E8F0;
+            color: #718096;
+            transition: all 0.3s ease;
+        }
+        
+        .step-indicator.active {
+            background: #1A6D82;
+            color: white;
+        }
+        
+        .step-indicator.completed {
+            background: #3ECF8E;
+            color: white;
+        }
+        
+        .slider-thumb::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: #1A6D82;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .staff-card:hover img {
+            transform: scale(1.05);
+        }
+        
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .sticky-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .sticky-cta.active {
+            transform: translateY(0);
+        }
+        
+        @media (max-width: 1024px) {
+            .hero-visual {
+                display: none;
+            }
+        }
+ 
+        .benefit-card {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .benefit-icon {
+            transition: all 0.3s ease;
+        }
+
+        .benefit-card:hover .benefit-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .service-option-card i {
+            transition: all 0.3s ease;
+        }
+
+        .service-option-card:hover i {
+            transform: scale(1.1);
+        }
+
+        .custom-checkbox {
+            appearance: none;
+            background-color: #fff;
+            margin: 0;
+            font: inherit;
+            color: currentColor;
+            width: 1.15em;
+            height: 1.15em;
+            border: 0.15em solid currentColor;
+            border-radius: 0.15em;
+            transform: translateY(-0.075em);
+            display: grid;
+            place-content: center;
+        }
+
+        .custom-checkbox::before {
+            content: "";
+            width: 0.65em;
+            height: 0.65em;
+            transform: scale(0);
+            transition: 120ms transform ease-in-out;
+            box-shadow: inset 1em 1em #1A6D82;
+            transform-origin: bottom left;
+            clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+        }
+
+        .custom-checkbox:checked::before {
+            transform: scale(1);
+        }
