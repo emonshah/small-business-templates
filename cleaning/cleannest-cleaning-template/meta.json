@@ -1,0 +1,16 @@
+{
+  "name": "CleanNest – Modern Cleaning Service Website",
+  "folder": "cleaning/cleannest-cleaning-template",
+  "category": "Cleaning",
+  "features": [
+    "single-page",
+    "eco-friendly",
+    "pricing plans",
+    "booking form",
+    "about section",
+    "contact form"
+  ],
+  "layout": "single",
+  "image": "cleaning/cleannest-cleaning-template/thumbnail.png",
+  "description": "CleanNest is a modern, eco-friendly cleaning service website template featuring multiple pages, pricing plans, and a clean design. Ideal for residential or office cleaning businesses seeking a professional online presence with booking functionality."
+}
