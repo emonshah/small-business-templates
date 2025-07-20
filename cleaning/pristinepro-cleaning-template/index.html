@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SparkleClean | Premium Cleaning Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <i class="fas fa-broom logo-icon"></i>
+                    <h1>PristinePro</h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <button class="cta-button">Book Now</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section with Three.js -->
+    <section class="hero" id="home">
+        <div id="three-canvas"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h2>Professional <span>3D Cleaning</span> Experience</h2>
+                <p>Experience the ultimate cleaning service with our eco-friendly products and professionally trained staff. We guarantee 100% satisfaction with our cutting-edge 3D visualization of services.</p>
+                <div class="hero-buttons">
+                    <button class="cta-button">Schedule a Clean</button>
+                    <button class="secondary-button">Explore 3D Tours</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our 3D Services</h2>
+                <p class="section-subtitle">Visualize our premium cleaning services in 3D before booking</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card rotate-3d">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Residential Cleaning</h3>
+                        <p>Thorough cleaning of your entire home including bedrooms, bathrooms, kitchen, and living areas using eco-friendly products.</p>
+                        <button class="cta-button" style="margin-top: 15px; padding: 10px 20px;">View 3D</button>
+                    </div>
+                </div>
+                <div class="service-card rotate-3d">
+                    <div class="service-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Commercial Cleaning</h3>
+                        <p>Professional cleaning services for offices, retail spaces, and other commercial properties to maintain a pristine environment.</p>
+                        <button class="cta-button" style="margin-top: 15px; padding: 10px 20px;">View 3D</button>
+                    </div>
+                </div>
+                <div class="service-card rotate-3d">
+                    <div class="service-icon">
+                        <i class="fas fa-couch"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Specialty Deep Cleaning</h3>
+                        <p>For an unparalleled level of clean, our deep cleaning service targets every nook and cranny, eliminating grime and revitalizing your space.</p>
+                        <button class="cta-button" style="margin-top: 15px; padding: 10px 20px;">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="section features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose Us</h2>
+                <p class="section-subtitle">Discover what makes SparkleClean the preferred choice for thousands of satisfied customers</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card floating">
+                    <div class="feature-icon">
+                        <i class="fas fa-vr-cardboard"></i>
+                    </div>
+                    <h3>3D Service Preview</h3>
+                    <p>Visualize exactly how we'll clean your space with our interactive 3D preview technology.</p>
+                </div>
+                <div class="feature-card floating">
+                    <div class="feature-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Eco-Friendly Products</h3>
+                    <p>We use only environmentally safe cleaning products that are tough on dirt but gentle on the planet.</p>
+                </div>
+                <div class="feature-card floating">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3>Trained Professionals</h3>
+                    <p>Our cleaning staff undergo rigorous training and background checks for your peace of mind.</p>
+                </div>
+                <div class="feature-card floating">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Guaranteed Satisfaction</h3>
+                    <p>Your happiness is our priority. If you're not completely satisfied, we'll re-clean at no extra charge until it's perfect.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Pricing Plans</h2>
+                <p class="section-subtitle">Simple, transparent pricing with no hidden fees</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Basic Clean</h3>
+                        <div class="price">$99<span>/session</span></div>
+                        <p>Perfect for small spaces</p>
+                    </div>
+                    <div class="pricing-body">
+                        <ul class="pricing-features">
+                            <li>Up to 3 rooms</li>
+                            <li>Surface cleaning</li>
+                            <li>Vacuuming & mopping</li>
+                            <li>Bathroom sanitization</li>
+                            <li>Kitchen cleaning</li>
+                        </ul>
+                        <button class="cta-button">Book Now</button>
+                    </div>
+                </div>
+                <div class="pricing-card popular">
+                    <div class="popular-tag">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3>Premium Clean</h3>
+                        <div class="price">$149<span>/session</span></div>
+                        <p>Our most popular package</p>
+                    </div>
+                    <div class="pricing-body">
+                        <ul class="pricing-features">
+                            <li>Up to 5 rooms</li>
+                            <li>Deep cleaning</li>
+                            <li>Appliance cleaning</li>
+                            <li>Window cleaning (interior)</li>
+                            <li>Cabinet wiping</li>
+                            <li>3D preview</li>
+                        </ul>
+                        <button class="cta-button">Book Now</button>
+                    </div>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Ultimate Clean</h3>
+                        <div class="price">$249<span>/session</span></div>
+                        <p>Whole-home deep cleaning</p>
+                    </div>
+                    <div class="pricing-body">
+                        <ul class="pricing-features">
+                            <li>Entire home</li>
+                            <li>Full deep cleaning service</li>
+                            <li>Inside appliances</li>
+                            <li>Baseboard and wall spot cleaning</li>
+                            <li>Window cleaning (interior & exterior)</li>
+                            <li>Advanced 3D visualization</li>
+                        </ul>
+                        <button class="cta-button">Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Customer Testimonials</h2>
+                <p class="section-subtitle">Hear what our satisfied customers have to say about our services</p>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        "The 3D visualization feature allowed me to see exactly how they would clean my home before booking. The attention to detail was incredible!"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SJ</div>
+                        <div class="author-info">
+                            <h4>Sarah Johnson</h4>
+                            <p>Homeowner, 2 years with us</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        "SparkleClean transformed our office environment. The 3D commercial cleaning preview helped us plan the perfect cleaning schedule."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MR</div>
+                        <div class="author-info">
+                            <h4>Michael Rodriguez</h4>
+                            <p>Office Manager</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        "Moving into a new place is stressful, but PristinePro made the cleaning process seamless. The deep clean was exceptional!"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">EK</div>
+                        <div class="author-info">
+                            <h4>Emily K.</h4>
+                            <p>New Homeowner, California</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contact Us</h2>
+                <p class="section-subtitle">Have questions or ready to book? Get in touch with us today!</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Our Location</h3>
+                            <p>123 Clean Street, Cityville, ST 12345</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Phone Number</h3>
+                            <p>(123) 456-7890</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Email Address</h3>
+                            <p>info@sparkleclean.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-vr-cardboard"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>3D Demo Center</h3>
+                            <p>Visit our showroom for an immersive 3D cleaning experience</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" class="form-control" placeholder="Enter your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" class="form-control" placeholder="Enter your email">
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Interested In</label>
+                            <select id="service" class="form-control">
+                                <option value="">Select a service</option>
+                                <option value="residential">Residential Cleaning</option>
+                                <option value="commercial">Commercial Cleaning</option>
+                                <option value="deep">Deep Cleaning</option>
+                                <option value="car">Car Detailing</option>
+                                <option value="window">Window Cleaning</option>
+                                <option value="move">Move In/Out Cleaning</option>
+                                <option value="3d">3D Visualization</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" class="form-control" placeholder="Tell us about your cleaning needs"></textarea>
+                        </div>
+                        <button type="submit" class="cta-button">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo">
+                        <i class="fas fa-broom logo-icon"></i>
+                        <h1>PristinePro</h1>
+                    </div>
+                    <p>Professional cleaning services with immersive 3D visualization for homes and businesses. We use eco-friendly products and trained professionals.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>3D Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Residential 3D Preview</a></li>
+                        <li><a href="#">Commercial 3D Visualization</a></li>
+                        <li><a href="#">Deep Cleaning Simulation</a></li>
+                        <li><a href="#">Move In/Out 3D Planning</a></li>
+                        <li><a href="#">VR Cleaning Experience</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe for cleaning tips and special offers.</p>
+                    <form>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Your Email Address">
+                        </div>
+                        <button type="submit" class="cta-button">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 PristinePro. All Rights Reserved. | Innovative Cleaning Solutions | Designed by <a href="https://emonshah.com" target="_blank" style="color: white; text-decoration: none;">Emon Shah</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

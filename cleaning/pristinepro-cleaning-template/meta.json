@@ -1,0 +1,16 @@
+{
+  "name": "PristinePro – 3D Cleaning Service Website Template",
+  "folder": "cleaning/pristinepro-cleaning-template",
+  "category": "Cleaning",
+  "features": [
+    "3D visualization",
+    "multi-page",
+    "eco-friendly",
+    "pricing plans",
+    "testimonials",
+    "booking/contact form"
+  ],
+  "layout": "multi",
+  "image": "cleaning/pristinepro-cleaning-template/thumbnail.png",
+  "description": "PristinePro is a modern cleaning service website template featuring cutting-edge 3D visualization of services. Includes multi-page layout, transparent pricing, eco-friendly focus, testimonials, and an immersive cleaning experience perfect for residential and commercial businesses."
+}
