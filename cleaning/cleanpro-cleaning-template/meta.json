@@ -1,0 +1,16 @@
+{
+  "name": "CleanPro – Single-Page Cleaning Website Template",
+  "folder": "cleaning/cleanpro-cleaning-template",
+  "category": "Cleaning",
+  "features": [
+    "single-page layout",
+    "eco-friendly cleaning services",
+    "online booking form",
+    "transparent pricing plans",
+    "US & UK contact info",
+    "customer testimonials"
+  ],
+  "layout": "single",
+  "image": "cleaning/cleanpro-cleaning-template/thumbnail.png",
+  "description": "CleanPro is a responsive single-page cleaning website template perfect for agencies operating in multiple locations like the US and UK. It includes clear pricing plans, booking forms, testimonials, and eco-friendly service features."
+}
