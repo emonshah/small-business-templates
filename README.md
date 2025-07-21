@@ -1,41 +1,58 @@
-# Small Business Website Templates
+ # 🧼 Small Business Website Templates
 
-This repository contains a collection of clean, responsive, and static website templates built specifically for small business demos. Each folder inside this repo represents a different business category, with ready-to-use HTML/CSS files.
-
-## 🌐 Live Demo
-
-Visit all live templates here 👉 [www.emonshah.com](https://www.emonshah.com)
-
-> Each template is hosted on a sub-path, such as:
-> 
-> - https://www.emonshah.com/home-cleaning-service/
-> - https://www.emonshah.com/local-plumber-site/
-> - https://www.emonshah.com/family-doctor-clinic/
-> - https://www.emonshah.com/beauty-salon-site/
-> - https://www.emonshah.com/cafe-website-template/
-
-## 📂 Included Templates
-
-| Folder Name               | Description                          |
-|---------------------------|--------------------------------------|
-| home-cleaning-service     | Website for a home cleaning service  |
-| local-plumber-site        | Local plumber service site           |
-| family-doctor-clinic      | Family doctor or clinic site         |
-| beauty-salon-site         | Beauty salon or spa website          |
-| cafe-website-template     | Simple café or coffee shop site      |
-
-## 💡 How to Use
-
-1. Clone or download this repository.
-2. Choose the template folder you want.
-3. Open the `index.html` file in your browser or deploy it to any static hosting (e.g., GitHub Pages, Netlify, Vercel).
-4. Customize the template as per your brand or client's needs.
-
-## 📃 License
-
-This project is under the [MIT License](LICENSE).  
-You are free to use, modify, and distribute these templates with credit.
+A collection of clean, responsive, and static website templates created for various small businesses. Each template is ready to use with HTML/CSS and hosted live for preview.
 
 ---
 
-> ✨ Created with ❤️ by [Emon Shah](https://www.emonshah.com)
+## 🌐 Live Demos
+
+Visit all live templates here 👉 [demo.emonshah.com](https://demo.emonshah.com)
+
+### 🔗 Featured Templates
+
+| Business Type           | Live Demo Link |
+|-------------------------|----------------|
+| 🧹 CleanPro (Single Page)         | [View Demo](https://demo.emonshah.com/cleaning/cleanpro-cleaning-template/) |
+| 🧽 EliteClean (Multi Page)        | [View Demo](https://demo.emonshah.com/cleaning/eliteclean-cleaning-template/) |
+| ✨ Sparkle Cleaning Template      | [View Demo](https://demo.emonshah.com/cleaning/sparkle-cleaning-template/) |
+| 🌿 PureClean Template             | [View Demo](https://demo.emonshah.com/cleaning/pureclean-cleaning-template/) |
+| 🏠 CleanNest (Multi Page)         | [View Demo](https://demo.emonshah.com/construction/cleannest-cleaning-template/) |
+| 🧼 PristinePro (3D + Multi Page)  | [View Demo](https://demo.emonshah.com/construction/pristinepro-cleaning-template/) |
+
+---
+
+## 📂 Template Categories
+
+| 📁 Folder Path                                  | 📋 Description                            |
+|------------------------------------------------|--------------------------------------------|
+| `cleaning/cleanpro-cleaning-template`          | Single page premium cleaning template      |
+| `cleaning/eliteclean-cleaning-template`        | Eco-friendly multi-page cleaning template  |
+| `cleaning/sparkle-cleaning-template`           | Bright and modern multipurpose template    |
+| `cleaning/pureclean-cleaning-template`         | Minimal single-page template               |
+| `construction/cleannest-cleaning-template`     | Service-focused cleaning business site     |
+| `construction/pristinepro-cleaning-template`   | 3D visualization + advanced features       |
+
+---
+
+## 🚀 How to Use
+
+1. Clone or download this repository.
+2. Choose your desired template folder.
+3. Open `index.html` in your browser.
+4. Deploy to any static hosting (e.g. GitHub Pages, Netlify, Vercel).
+5. Customize images, content, and branding as per your need.
+
+---
+
+## 📃 License
+
+Licensed under the [MIT License](LICENSE).  
+✅ You can use, modify, and distribute with attribution.
+
+---
+
+## 👨‍💻 Created By
+
+Made with ❤️ by [**Emon Shah**](https://www.emonshah.com)  
+Follow for more templates, tools, and web dev resources.
+
