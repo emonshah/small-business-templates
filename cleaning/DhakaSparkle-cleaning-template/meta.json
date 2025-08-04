@@ -1,6 +1,6 @@
 {
   "name": " Dhaka Sparkle – Modern Cleaning Service Website",
-  "folder": "cleaning/DhakaSparkle-cleaning-template",
+  "folder": "cleaning/dhakasparkle-cleaning-template",
   "category": "Cleaning",
   "features": [
     "single-page",
@@ -11,6 +11,6 @@
     "contact form"
   ],
   "layout": "single",
-  "image": "cleaning/DhakaSparkle-cleaning-template/thumbnail.png",
+  "image": "cleaning/dhakasparkle-cleaning-template/thumbnail.png",
   "description": " Dhaka Sparkle is a modern, eco-friendly cleaning service website template featuring multiple pages, pricing plans, and a clean design. Ideal for residential or office cleaning businesses seeking a professional online presence with booking functionality."
 }
