@@ -171,12 +171,40 @@ a:hover { color: var(--secondary); }
 .guarantee-section .icon { font-size: 3.5rem; margin-bottom: 1rem; }
 
 .cta { background: var(--light-bg); text-align: center; padding: 6rem 0; border-radius: var(--border-radius); margin: 6rem auto; }
+.cta .btn-secondary { margin-top: 2rem; }
 
 /* 8. Page-Specific Styles */
 .how-it-works-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; text-align: center; }
 .step-icon { width: 70px; height: 70px; background: var(--secondary); color: var(--dark); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; font-family: 'Playfair Display', serif; margin: 0 auto 1.5rem; box-shadow: var(--shadow); }
 
-.why-us-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+.why-us-grid { display: flex; gap: 5rem; align-items: stretch; }
+.why-us-image {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.why-us-image .image-wrapper {
+    position: relative;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-grow: 1;
+    display: flex;
+}
+.why-us-image .image-wrapper:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: var(--shadow-lg);
+}
+.why-us-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+}
 .checklist li { display: flex; align-items: center; margin-bottom: 1.5rem; font-size: 1.1rem; }
 .checklist i { color: var(--secondary); font-size: 1.5rem; margin-right: 1rem; }
 
@@ -230,7 +258,7 @@ a:hover { color: var(--secondary); }
     h1 { font-size: 3rem; }
     .hero .hero-title { font-size: 3.5rem; }
     .why-us-grid, .contact-grid, .footer-grid { grid-template-columns: 1fr; text-align: center; }
-    .why-us-image { margin-top: 3rem; }
+    .why-us-image { display: none; }
     .contact-info { margin-top: 3rem; }
     .contact-info-item { justify-content: center; }
     .footer-social { justify-content: center; }
