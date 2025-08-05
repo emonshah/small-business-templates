@@ -41,6 +41,7 @@
         }
     </script>
   <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/booking.css">
 </head>
 <body>
     <!-- Glassmorphism Navigation -->
@@ -65,7 +66,7 @@
             <div class="flex items-center space-x-4">
                 <a href="tel:+1234567890" class="hidden md:flex items-center text-text hover:text-primary">
                     <i class="fas fa-phone mr-2"></i>
-                    <span>(123) 456-7890</span>
+                    <span>(555) 123-4567</span>
                 </a>
                 <a href="#booking" class="btn btn-primary px-6 py-2 rounded-xl text-white font-medium">Book Now</a>
                 <button class="lg:hidden text-text">
@@ -146,8 +147,9 @@
     </section>
 
     <!-- Benefits Section -->
-    <section class="py-20 bg-secondary">
-        <div class="container mx-auto px-4">
+    <section class="py-20 bg-secondary relative">
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://www.toptal.com/designers/subtlepatterns/uploads/double-bubble-outline.png'); opacity: 0.05;"></div>
+        <div class="container mx-auto px-4 relative">
             <div class="text-center max-w-3xl mx-auto mb-16 fade-in-section">
                 <h2 class="text-3xl md:text-4xl font-bold mb-6">Why Choose EliteClean?</h2>
                 <p class="text-gray-600 text-lg">We provide exceptional cleaning services with a focus on quality, sustainability, and customer satisfaction.</p>
@@ -252,61 +254,107 @@
             <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden fade-in-section">
                 <div class="p-8">
                     <!-- Step Indicator -->
-                    <div class="flex justify-between items-center mb-12 relative">
+                    <div id="step-indicator-container" class="flex justify-between items-center mb-12 relative">
                         <div class="absolute top-1/2 left-0 w-full h-1 bg-gray-200 -translate-y-1/2 -z-10"></div>
-                        <div class="absolute top-1/2 left-0 w-1/3 h-1 bg-primary -translate-y-1/2 -z-10"></div>
-                        <div class="flex flex-col items-center text-center w-1/4">
-                            <div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center text-xl font-bold">1</div>
+                        <div id="progress-bar" class="absolute top-1/2 left-0 h-1 bg-primary -translate-y-1/2 -z-10" style="width: 0%;"></div>
+                        <div class="step-indicator flex flex-col items-center text-center w-1/4" data-step="1">
+                            <div class="indicator-circle w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center text-xl font-bold">1</div>
                             <span class="mt-2 font-semibold text-primary">Service</span>
                         </div>
-                        <div class="flex flex-col items-center text-center w-1/4">
-                            <div class="w-12 h-12 rounded-full bg-gray-200 text-gray-500 flex items-center justify-center text-xl font-bold">2</div>
+                        <div class="step-indicator flex flex-col items-center text-center w-1/4" data-step="2">
+                            <div class="indicator-circle w-12 h-12 rounded-full bg-gray-200 text-gray-500 flex items-center justify-center text-xl font-bold">2</div>
                             <span class="mt-2 font-semibold text-gray-500">Date & Time</span>
                         </div>
-                        <div class="flex flex-col items-center text-center w-1/4">
-                            <div class="w-12 h-12 rounded-full bg-gray-200 text-gray-500 flex items-center justify-center text-xl font-bold">3</div>
+                        <div class="step-indicator flex flex-col items-center text-center w-1/4" data-step="3">
+                            <div class="indicator-circle w-12 h-12 rounded-full bg-gray-200 text-gray-500 flex items-center justify-center text-xl font-bold">3</div>
                             <span class="mt-2 font-semibold text-gray-500">Details</span>
                         </div>
-                        <div class="flex flex-col items-center text-center w-1/4">
-                            <div class="w-12 h-12 rounded-full bg-gray-200 text-gray-500 flex items-center justify-center text-xl font-bold">4</div>
+                        <div class="step-indicator flex flex-col items-center text-center w-1/4" data-step="4">
+                            <div class="indicator-circle w-12 h-12 rounded-full bg-gray-200 text-gray-500 flex items-center justify-center text-xl font-bold">4</div>
                             <span class="mt-2 font-semibold text-gray-500">Confirm</span>
                         </div>
                     </div>
                     
-                    <!-- Step 1 Content -->
-                    <div class="step-content">
-                        <h3 class="text-2xl font-bold mb-8 text-center">Select Your Service</h3>
-                        
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div class="service-option-card border-2 border-gray-200 rounded-xl p-6 text-center hover:border-primary hover:bg-primary/5 transition-all duration-300 cursor-pointer">
-                                <i class="fas fa-home text-primary text-4xl mb-4"></i>
-                                <h4 class="font-bold text-xl">Residential Cleaning</h4>
-                                <p class="text-gray-600">Starting at $90</p>
-                            </div>
-                            
-                            <div class="service-option-card border-2 border-gray-200 rounded-xl p-6 text-center hover:border-accent hover:bg-accent/5 transition-all duration-300 cursor-pointer">
-                                <i class="fas fa-building text-accent text-4xl mb-4"></i>
-                                <h4 class="font-bold text-xl">Office Cleaning</h4>
-                                <p class="text-gray-600">Starting at $150</p>
-                            </div>
-                            
-                            <div class="service-option-card border-2 border-gray-200 rounded-xl p-6 text-center hover:border-highlight hover:bg-highlight/5 transition-all duration-300 cursor-pointer">
-                                <i class="fas fa-broom text-highlight text-4xl mb-4"></i>
-                                <h4 class="font-bold text-xl">Deep Cleaning</h4>
-                                <p class="text-gray-600">Starting at $120</p>
-                            </div>
-                            
-                            <div class="service-option-card border-2 border-gray-200 rounded-xl p-6 text-center hover:border-primary hover:bg-primary/5 transition-all duration-300 cursor-pointer">
-                                <i class="fas fa-couch text-primary text-4xl mb-4"></i>
-                                <h4 class="font-bold text-xl">Carpet Cleaning</h4>
-                                <p class="text-gray-600">Starting at $75</p>
+                    <form id="booking-form">
+                        <!-- Step 1: Select Service -->
+                        <div id="step-1" class="step-content">
+                            <h3 class="text-2xl font-bold mb-8 text-center">Select Your Service</h3>
+                            <div id="service-options-container" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+                            <p id="service-error" class="text-red-500 text-sm mt-2 text-center hidden">Please select a service.</p>
+                            <div class="flex justify-end mt-12">
+                                <button type="button" class="btn btn-primary px-8 py-3 rounded-xl font-semibold text-white next-step-btn" data-step="1">Next Step <i class="fas fa-arrow-right ml-2"></i></button>
                             </div>
                         </div>
-                        
-                        <div class="flex justify-end mt-12">
-                            <button class="btn btn-primary px-8 py-3 rounded-xl font-semibold text-white">Next Step <i class="fas fa-arrow-right ml-2"></i></button>
+
+                        <!-- Step 2: Date & Time -->
+                        <div id="step-2" class="step-content hidden">
+                            <h3 class="text-2xl font-bold mb-8 text-center">Select Date & Time</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                <div>
+                                    <label for="booking-date" class="block font-bold mb-2">Date</label>
+                                    <input type="date" id="booking-date" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary">
+                                    <p id="date-error" class="text-red-500 text-sm mt-2 hidden">Please select a valid date.</p>
+                                </div>
+                                <div>
+                                    <label class="block font-bold mb-2">Time</label>
+                                    <div id="time-slots-container" class="time-slots-grid">
+                                        <!-- Time slots will be populated by JS -->
+                                    </div>
+                                    <p id="time-error" class="text-red-500 text-sm mt-2 hidden">Please select a time slot.</p>
+                                </div>
+                            </div>
+                            <div class="flex justify-between mt-12">
+                                <button type="button" class="btn btn-secondary px-8 py-3 rounded-xl font-semibold prev-step-btn" data-step="2">Previous Step</button>
+                                <button type="button" class="btn btn-primary px-8 py-3 rounded-xl font-semibold text-white next-step-btn" data-step="2">Next Step <i class="fas fa-arrow-right ml-2"></i></button>
+                            </div>
                         </div>
-                    </div>
+
+                        <!-- Step 3: Details -->
+                        <div id="step-3" class="step-content hidden">
+                            <h3 class="text-2xl font-bold mb-8 text-center">Your Details</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <input type="text" id="full-name" placeholder="Full Name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary">
+                                    <p id="name-error" class="text-red-500 text-sm mt-2 hidden">Please enter your full name.</p>
+                                </div>
+                                <div>
+                                    <input type="email" id="email" placeholder="Email Address" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary">
+                                    <p id="email-error" class="text-red-500 text-sm mt-2 hidden">Please enter a valid email address.</p>
+                                </div>
+                                <input type="tel" id="phone" placeholder="Phone Number" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary">
+                                <div class="relative">
+                                    <input type="text" id="address" placeholder="Full Address" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary">
+                                    <div id="map-container" class="map-container mt-4"></div>
+                                </div>
+                            </div>
+                            <textarea id="notes" placeholder="Additional Notes (e.g., pets, specific instructions)" class="w-full mt-6 px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary" rows="4"></textarea>
+                            <div class="flex justify-between mt-12">
+                                <button type="button" class="btn btn-secondary px-8 py-3 rounded-xl font-semibold prev-step-btn" data-step="3">Previous Step</button>
+                                <button type="button" class="btn btn-primary px-8 py-3 rounded-xl font-semibold text-white next-step-btn" data-step="3">Next Step <i class="fas fa-arrow-right ml-2"></i></button>
+                            </div>
+                        </div>
+
+                        <!-- Step 4: Confirmation -->
+                        <div id="step-4" class="step-content hidden">
+                            <h3 class="text-2xl font-bold mb-8 text-center">Confirm Your Booking</h3>
+                            <div id="booking-summary" class="bg-gray-50 rounded-xl p-6 space-y-4">
+                                <!-- Summary will be populated by JS -->
+                            </div>
+                            <div class="flex justify-between mt-12">
+                                <button type="button" class="btn btn-secondary px-8 py-3 rounded-xl font-semibold prev-step-btn" data-step="4">Previous Step</button>
+                                <button type="submit" class="btn btn-accent px-8 py-3 rounded-xl font-semibold text-white">Confirm Booking</button>
+                            </div>
+                        </div>
+
+                        <!-- Success Message -->
+                        <div id="booking-success" class="step-content hidden text-center">
+                            <div class="w-24 h-24 mx-auto mb-6 rounded-full bg-accent/10 flex items-center justify-center">
+                                <i class="fas fa-check text-accent text-5xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4">Booking Confirmed!</h3>
+                            <p class="text-gray-600">Thank you for choosing EliteClean. You will receive a confirmation email shortly.</p>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -470,7 +518,7 @@
                         <div class="swiper-slide">
                             <div class="bg-white rounded-2xl p-8 shadow-sm">
                                 <div class="flex items-center mb-6">
-                                    <div class="w-16 h-16 rounded-full bg-gray-200 border-2 border-dashed mr-4"></div>
+                                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Client photo" class="w-16 h-16 rounded-full object-cover mr-4">
                                     <div>
                                         <h4 class="font-bold text-lg">Jennifer K.</h4>
                                         <div class="flex text-yellow-400">
@@ -490,7 +538,7 @@
                         <div class="swiper-slide">
                             <div class="bg-white rounded-2xl p-8 shadow-sm">
                                 <div class="flex items-center mb-6">
-                                    <div class="w-16 h-16 rounded-full bg-gray-200 border-2 border-dashed mr-4"></div>
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Client photo" class="w-16 h-16 rounded-full object-cover mr-4">
                                     <div>
                                         <h4 class="font-bold text-lg">Robert T.</h4>
                                         <div class="flex text-yellow-400">
@@ -510,7 +558,7 @@
                         <div class="swiper-slide">
                             <div class="bg-white rounded-2xl p-8 shadow-sm">
                                 <div class="flex items-center mb-6">
-                                    <div class="w-16 h-16 rounded-full bg-gray-200 border-2 border-dashed mr-4"></div>
+                                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Client photo" class="w-16 h-16 rounded-full object-cover mr-4">
                                     <div>
                                         <h4 class="font-bold text-lg">Amanda S.</h4>
                                         <div class="flex text-yellow-400">
@@ -539,7 +587,7 @@
             <p class="text-white text-opacity-90 max-w-2xl mx-auto mb-8">Join thousands of satisfied customers who enjoy cleaner homes and offices with our professional service.</p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
                 <a href="#booking" class="btn bg-white text-primary px-8 py-4 rounded-xl font-bold text-lg hover:bg-opacity-90">Book Your Cleaning</a>
-                <a href="tel:+1234567890" class="btn bg-black bg-opacity-20 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-opacity-30">Call Now: (123) 456-7890</a>
+                <a href="tel:+1234567890" class="btn bg-black bg-opacity-20 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-opacity-30">Call Now: (555) 123-4567</a>
             </div>
         </div>
     </section>
@@ -589,15 +637,15 @@
                     <ul class="space-y-4">
                         <li class="flex items-start">
                             <i class="fas fa-map-marker-alt mt-1 mr-3 text-accent"></i>
-                            <span>123 Clean Street, Sparkle City, SC 12345</span>
+                            <span>456 Sparkle Street, Columbia, SC 29201</span>
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-phone mr-3 text-accent"></i>
-                            <span>(123) 456-7890</span>
+                            <span>(555) 123-4567</span>
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-envelope mr-3 text-accent"></i>
-                            <span>hello@eliteclean.com</span>
+                            <span>contact@eliteclean.com</span>
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-clock mr-3 text-accent"></i>
