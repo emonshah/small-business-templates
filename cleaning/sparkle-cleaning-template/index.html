@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SparkleClean | Professional Cleaning Services</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -30,9 +30,48 @@
         <section class="hero home-hero">
             <div class="container">
                 <div class="hero-content scroll-reveal">
-                    <h1 class="hero-title">The Best Clean, Every Time.</h1>
-                    <p class="hero-text">Tired of cleaning? Let our professional, vetted, and insured team bring the sparkle back to your home. Book your service in 60 seconds!</p>
-                    <a href="pricing.html" class="btn btn-primary">View Plans & Pricing</a>
+                    <h1 class="hero-title">Dhaka Cleaning Pro</h1>
+                    <p class="hero-text">Finally, a trusted cleaning service that lets you book your appointment in 60 seconds and enjoy a spotless home.</p>
+                    <a href="#quote-section" class="btn btn-primary book-now-scroll">Book Now</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section quick-booking bg-light" id="quote-section">
+            <div class="container">
+                <div class="section-header scroll-reveal">
+                    <h2 class="section-title">Get a Free, Instant Quote</h2>
+                    <p class="section-subtitle">Fill out the form below and we'll get back to you in minutes.</p>
+                </div>
+                <div class="booking-form-container scroll-reveal" id="booking-form-card">
+                    <form class="booking-form">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="Your Email" required>
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control" required>
+                                    <option value="" disabled selected>Select Service Type</option>
+                                    <option value="residential">Residential Cleaning</option>
+                                    <option value="deep">Deep Cleaning</option>
+                                    <option value="move-out">Move In/Out Cleaning</option>
+                                    <option value="commercial">Commercial Cleaning</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <input type="date" class="form-control" placeholder="Preferred Date" required>
+                            </div>
+                        </div>
+                        <div class="form-submit">
+                            <button type="submit" class="btn btn-primary">Get Instant Quote</button>
+                        </div>
+                    </form>
+                    <div id="booking-success-message" class="success-message" style="display: none;">
+                        <p>Thank you! Your quote request has been sent. We will get back to you shortly.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -90,22 +129,410 @@
 
         <section class="section why-us">
             <div class="container">
-                <div class="why-us-grid">
-                    <div class="why-us-text scroll-reveal">
-                        <h2 class="section-title">Why SparkleClean?</h2>
-                        <p>When you choose us, you're choosing a service that puts quality and your peace of mind first.</p>
-                        <ul class="checklist">
-                            <li><i class="fas fa-check-circle"></i> Vetted & Insured Professionals</li>
-                            <li><i class="fas fa-check-circle"></i> Eco-Friendly Product Options</li>
-                            <li><i class="fas fa-check-circle"></i> 100% Satisfaction Guarantee</li>
-                            <li><i class="fas fa-check-circle"></i> Easy & Secure Online Booking</li>
-                            <li><i class="fas fa-check-circle"></i> Friendly, Reliable Service</li>
-                        </ul>
+                <div class="section-header scroll-reveal">
+                    <h2 class="section-title">Why Choose SparkleClean?</h2>
+                    <p class="section-subtitle">We make getting a clean home simple, reliable, and stress-free.</p>
+                </div>
+                <div class="customer-benefits-table scroll-reveal">
+                    <!-- Header Row -->
+                    <div class="benefit-row header-row">
+                        <div class="benefit-pain-header">Your Concern</div>
+                        <div class="benefit-solution-header">Our Solution</div>
                     </div>
-                    <div class="why-us-image scroll-reveal">
-                        <div class="image-wrapper">
-                            <img src="https://plus.unsplash.com/premium_photo-1664372899236-9d0654e2507f?q=80&w=395&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Smiling cleaning professional with supplies">
+                    <!-- Item 1 -->
+                    <div class="benefit-row">
+                        <div class="benefit-pain"><i class="fas fa-clock"></i> Hard to book during busy hours</div>
+                        <div class="benefit-solution"><i class="fas fa-check-circle"></i> 24/7 online booking → pick your date & time instantly.</div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="benefit-row">
+                        <div class="benefit-pain"><i class="fas fa-user-shield"></i> Unsure if the cleaner is reliable</div>
+                        <div class="benefit-solution"><i class="fas fa-check-circle"></i> Verified testimonials & ratings from real customers.</div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="benefit-row">
+                        <div class="benefit-pain"><i class="fas fa-calendar-times"></i> Team arrives late or is unprofessional</div>
+                        <div class="benefit-solution"><i class="fas fa-check-circle"></i> Professional, trained & punctual staff, guaranteed.</div>
+                    </div>
+                    <!-- Item 4 -->
+                    <div class="benefit-row">
+                        <div class="benefit-pain"><i class="fas fa-dollar-sign"></i> Confused about pricing</div>
+                        <div class="benefit-solution"><i class="fas fa-check-circle"></i> Transparent pricing → choose a plan that fits you.</div>
+                    </div>
+                    <!-- Item 5 -->
+                    <div class="benefit-row">
+                        <div class="benefit-pain"><i class="fas fa-images"></i> Worried about cleaning quality</div>
+                        <div class="benefit-solution"><i class="fas fa-check-circle"></i> Before/After gallery → see the results for yourself.</div>
+                    </div>
+                    <!-- Item 6 -->
+                    <div class="benefit-row">
+                        <div class="benefit-pain"><i class="fas fa-mobile-alt"></i> Mobile booking is hard</div>
+                        <div class="benefit-solution"><i class="fas fa-check-circle"></i> Fully mobile-friendly site → book from your phone anytime.</div>
+                    </div>
+                </div>
+                <div class="section-cta scroll-reveal">
+                    <a href="#quote-section" class="btn btn-primary book-now-scroll">Book Your Cleaning Now</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section pricing-section bg-light">
+            <div class="container">
+                <div class="section-header scroll-reveal">
+                    <h2 class="section-title">Our Cleaning Service Packages</h2>
+                    <p class="section-subtitle">Find the perfect cleaning solution for your home or office.</p>
+                </div>
+                <div class="pricing-grid">
+                    <!-- Basic Plan -->
+                    <div class="pricing-card scroll-reveal">
+                        <div class="pricing-header">
+                            <h3 class="pricing-name">Standard Clean</h3>
+                            <p>Ideal for regular upkeep and maintaining a fresh home.</p>
+                            <div class="pricing-price">$99</div>
                         </div>
+                        <ul class="pricing-features">
+                            <li class="pricing-feature">Dusting & Wiping Surfaces</li>
+                            <li class="pricing-feature">Vacuuming & Mopping Floors</li>
+                            <li class="pricing-feature">Bathroom & Kitchen Refresh</li>
+                            <li class="pricing-feature">Trash Removal</li>
+                        </ul>
+                        <a href="#quote-section" class="btn btn-secondary book-now-scroll">Get Started</a>
+                    </div>
+                    <!-- Standard Plan -->
+                    <div class="pricing-card popular scroll-reveal">
+                        <div class="pricing-header">
+                            <h3 class="pricing-name">Deep Clean</h3>
+                            <p>A comprehensive clean for a truly spotless and sanitized space.</p>
+                            <div class="pricing-price">$199</div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li class="pricing-feature">Everything in Standard, plus:</li>
+                            <li class="pricing-feature">Detailed Appliance Cleaning</li>
+                            <li class="pricing-feature">Grout & Tile Scrubbing</li>
+                            <li class="pricing-feature">Window Interior Cleaning</li>
+                            <li class="pricing-feature">Baseboard & Wall Spot Cleaning</li>
+                        </ul>
+                        <a href="#quote-section" class="btn btn-primary book-now-scroll">Get Started</a>
+                    </div>
+                    <!-- Premium Plan -->
+                    <div class="pricing-card scroll-reveal">
+                        <div class="pricing-header">
+                            <h3 class="pricing-name">Move In/Out Clean</h3>
+                            <p>Get your property move-in ready or ensure a smooth move-out.</p>
+                            <div class="pricing-price">$299</div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li class="pricing-feature">Everything in Deep Clean, plus:</li>
+                            <li class="pricing-feature">Inside Cabinets & Drawers</li>
+                            <li class="pricing-feature">Inside Oven & Refrigerator</li>
+                            <li class="pricing-feature">Carpet Vacuuming & Spot Treatment</li>
+                        </ul>
+                        <a href="#quote-section" class="btn btn-secondary book-now-scroll">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section about-summary-section-v3">
+            <div class="container">
+                <div class="about-grid-v3">
+                    <div class="about-image-v3 scroll-reveal">
+                        <img src="https://images.pexels.com/photos/4239101/pexels-photo-4239101.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Professional cleaning team at work">
+                    </div>
+                    <div class="about-content-v3 scroll-reveal">
+                        <h2 class="section-title">Our Commitment to Cleanliness</h2>
+                        <p>At SparkleClean, we believe a clean space is a happy space. As a dedicated local cleaning service, we pour our passion and expertise into every detail, ensuring your home or office sparkles and shines.</p>
+                        <ul class="about-values-list">
+                            <li><i class="fas fa-check-circle"></i> <strong>Personalized Service:</strong> Tailored to your unique needs.</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Transparent Pricing:</strong> No hidden fees, just clear costs.</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Satisfaction Guaranteed:</strong> We're not happy until you are.</li>
+                        </ul>
+                        <a href="about.html" class="btn btn-primary">Learn More About Us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section trust-section bg-light">
+            <div class="container">
+                <div class="section-header scroll-reveal">
+                    <h2 class="section-title">What Our Clients Say</h2>
+                    <p class="section-subtitle">Real reviews from happy customers on Google.</p>
+                </div>
+            </div>
+            <div class="reviews-slider-container">
+                <div class="reviews-grid">
+                    <!-- Review Card 1 -->
+                    <div class="g-review-card">
+                        <div class="g-card-header">
+                            <div class="g-author-details">
+                                <img src="https://i.pravatar.cc/40?u=a" alt="Avatar">
+                                <div>
+                                    <h4>Anika Rahman</h4>
+                                    <span>2 weeks ago</span>
+                                </div>
+                            </div>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/24px-Google_%22G%22_logo.svg.png" alt="Google Icon" class="g-icon">
+                        </div>
+                        <div class="g-card-body">
+                            <div class="g-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p>"Absolutely phenomenal service. My home has never looked better. The team was professional, punctual, and incredibly thorough."</p>
+                        </div>
+                    </div>
+                    <!-- Review Card 2 -->
+                    <div class="g-review-card">
+                        <div class="g-card-header">
+                            <div class="g-author-details">
+                                <img src="https://i.pravatar.cc/40?u=b" alt="Avatar">
+                                <div>
+                                    <h4>Farhan Ahmed</h4>
+                                    <span>a month ago</span>
+                                </div>
+                            </div>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/24px-Google_%22G%22_logo.svg.png" alt="Google Icon" class="g-icon">
+                        </div>
+                        <div class="g-card-body">
+                            <div class="g-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p>"Booking was so easy, and the cleaning was top-notch. It's a relief to finally find a reliable cleaning service in the city."</p>
+                        </div>
+                    </div>
+                    <!-- Review Card 3 -->
+                    <div class="g-review-card">
+                        <div class="g-card-header">
+                            <div class="g-author-details">
+                                <img src="https://i.pravatar.cc/40?u=c" alt="Avatar">
+                                <div>
+                                    <h4>Sadia Islam</h4>
+                                    <span>3 months ago</span>
+                                </div>
+                            </div>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/24px-Google_%22G%22_logo.svg.png" alt="Google Icon" class="g-icon">
+                        </div>
+                        <div class="g-card-body">
+                            <div class="g-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p>"The deep clean service is a game-changer. They got into every nook and cranny. Worth every penny for the peace of mind."</p>
+                        </div>
+                    </div>
+                    <!-- Review Card 4 -->
+                    <div class="g-review-card">
+                        <div class="g-card-header">
+                            <div class="g-author-details">
+                                <img src="https://i.pravatar.cc/40?u=d" alt="Avatar">
+                                <div>
+                                    <h4>Rohan Mahmud</h4>
+                                    <span>4 months ago</span>
+                                </div>
+                            </div>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/24px-Google_%22G%22_logo.svg.png" alt="Google Icon" class="g-icon">
+                        </div>
+                        <div class="g-card-body">
+                            <div class="g-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p>"I'm a repeat customer for a reason. Consistent, high-quality service every single time. The staff is always friendly and respectful."</p>
+                        </div>
+                    </div>
+                    <!-- Review Card 5 -->
+                    <div class="g-review-card">
+                        <div class="g-card-header">
+                            <div class="g-author-details">
+                                <img src="https://i.pravatar.cc/40?u=e" alt="Avatar">
+                                <div>
+                                    <h4>Nadia Chowdhury</h4>
+                                    <span>5 months ago</span>
+                                </div>
+                            </div>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/24px-Google_%22G%22_logo.svg.png" alt="Google Icon" class="g-icon">
+                        </div>
+                        <div class="g-card-body">
+                            <div class="g-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p>"Excellent attention to detail. They left my apartment sparkling clean. I was very impressed with the move-out cleaning service."</p>
+                        </div>
+                    </div>
+                    <!-- Review Card 6 -->
+                    <div class="g-review-card">
+                        <div class="g-card-header">
+                            <div class="g-author-details">
+                                <img src="https://i.pravatar.cc/40?u=f" alt="Avatar">
+                                <div>
+                                    <h4>Imran Khan</h4>
+                                    <span>6 months ago</span>
+                                </div>
+                            </div>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/24px-Google_%22G%22_logo.svg.png" alt="Google Icon" class="g-icon">
+                        </div>
+                        <div class="g-card-body">
+                            <div class="g-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <p>"Great value and reliable service. They were able to accommodate my last-minute request. Will definitely use them again."</p>
+                        </div>
+                    </div>
+                    <!-- DUPLICATED FOR INFINITE SCROLL -->
+                    <!-- Review Card 1 -->
+                    <div class="g-review-card">
+                        <div class="g-card-header">
+                            <div class="g-author-details">
+                                <img src="https://i.pravatar.cc/40?u=a" alt="Avatar">
+                                <div>
+                                    <h4>Anika Rahman</h4>
+                                    <span>2 weeks ago</span>
+                                </div>
+                            </div>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/24px-Google_%22G%22_logo.svg.png" alt="Google Icon" class="g-icon">
+                        </div>
+                        <div class="g-card-body">
+                            <div class="g-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p>"Absolutely phenomenal service. My home has never looked better. The team was professional, punctual, and incredibly thorough."</p>
+                        </div>
+                    </div>
+                    <!-- Review Card 2 -->
+                    <div class="g-review-card">
+                        <div class="g-card-header">
+                            <div class="g-author-details">
+                                <img src="https://i.pravatar.cc/40?u=b" alt="Avatar">
+                                <div>
+                                    <h4>Farhan Ahmed</h4>
+                                    <span>a month ago</span>
+                                </div>
+                            </div>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/24px-Google_%22G%22_logo.svg.png" alt="Google Icon" class="g-icon">
+                        </div>
+                        <div class="g-card-body">
+                            <div class="g-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p>"Booking was so easy, and the cleaning was top-notch. It's a relief to finally find a reliable cleaning service in the city."</p>
+                        </div>
+                    </div>
+                    <!-- Review Card 3 -->
+                    <div class="g-review-card">
+                        <div class="g-card-header">
+                            <div class="g-author-details">
+                                <img src="https://i.pravatar.cc/40?u=c" alt="Avatar">
+                                <div>
+                                    <h4>Sadia Islam</h4>
+                                    <span>3 months ago</span>
+                                </div>
+                            </div>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/24px-Google_%22G%22_logo.svg.png" alt="Google Icon" class="g-icon">
+                        </div>
+                        <div class="g-card-body">
+                            <div class="g-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p>"The deep clean service is a game-changer. They got into every nook and cranny. Worth every penny for the peace of mind."</p>
+                        </div>
+                    </div>
+                    <!-- Review Card 4 -->
+                    <div class="g-review-card">
+                        <div class="g-card-header">
+                            <div class="g-author-details">
+                                <img src="https://i.pravatar.cc/40?u=d" alt="Avatar">
+                                <div>
+                                    <h4>Rohan Mahmud</h4>
+                                    <span>4 months ago</span>
+                                </div>
+                            </div>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/24px-Google_%22G%22_logo.svg.png" alt="Google Icon" class="g-icon">
+                        </div>
+                        <div class="g-card-body">
+                            <div class="g-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p>"I'm a repeat customer for a reason. Consistent, high-quality service every single time. The staff is always friendly and respectful."</p>
+                        </div>
+                    </div>
+                    <!-- Review Card 5 -->
+                    <div class="g-review-card">
+                        <div class="g-card-header">
+                            <div class="g-author-details">
+                                <img src="https://i.pravatar.cc/40?u=e" alt="Avatar">
+                                <div>
+                                    <h4>Nadia Chowdhury</h4>
+                                    <span>5 months ago</span>
+                                </div>
+                            </div>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/24px-Google_%22G%22_logo.svg.png" alt="Google Icon" class="g-icon">
+                        </div>
+                        <div class="g-card-body">
+                            <div class="g-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p>"Excellent attention to detail. They left my apartment sparkling clean. I was very impressed with the move-out cleaning service."</p>
+                        </div>
+                    </div>
+                    <!-- Review Card 6 -->
+                    <div class="g-review-card">
+                        <div class="g-card-header">
+                            <div class="g-author-details">
+                                <img src="https://i.pravatar.cc/40?u=f" alt="Avatar">
+                                <div>
+                                    <h4>Imran Khan</h4>
+                                    <span>6 months ago</span>
+                                </div>
+                            </div>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/24px-Google_%22G%22_logo.svg.png" alt="Google Icon" class="g-icon">
+                        </div>
+                        <div class="g-card-body">
+                            <div class="g-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <p>"Great value and reliable service. They were able to accommodate my last-minute request. Will definitely use them again."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section gallery-section">
+            <div class="container">
+                <div class="section-header scroll-reveal">
+                    <h2 class="section-title">Our Transformative Results</h2>
+                    <p class="section-subtitle">Seeing is believing. Check out the difference we make.</p>
+                </div>
+                <div class="gallery-grid">
+                    <!-- Gallery Item 1: Kitchen -->
+                    <div class="comparison-slider scroll-reveal">
+                        <div class="before-image">
+                            <img src="https://as2.ftcdn.net/jpg/10/34/20/03/1000_F_1034200308_HNpgCxL72iaEIgKtAobOKXUyY8F3QlS7.jpg" alt="Messy Kitchen Before">
+                        </div>
+                        <img src="https://images.pexels.com/photos/1080722/pexels-photo-1080722.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Sparkling Kitchen After" class="after-image">
+                        <div class="slider-handle"><i class="fas fa-arrows-alt-h"></i></div>
+                    </div>
+                    <!-- Gallery Item 2: Bathroom -->
+                    <div class="comparison-slider scroll-reveal">
+                        <div class="before-image">
+                            <img src="https://chetscleaning.com/wp-content/uploads/ceramic-tile-1024x676.jpg" alt="Dirty Bathroom Before">
+                        </div>
+                        <img src="https://images.pexels.com/photos/5825569/pexels-photo-5825569.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Immaculate Bathroom After" class="after-image">
+                        <div class="slider-handle"><i class="fas fa-arrows-alt-h"></i></div>
+                    </div>
+                     <!-- Gallery Item 3: Living Room -->
+                    <div class="comparison-slider scroll-reveal">
+                        <div class="before-image">
+                            <img src="https://chetscleaning.com/wp-content/uploads/ceramic-tile-1024x676.jpg" alt="Messy Living Room Before">
+                        </div>
+                        <img src="https://images.pexels.com/photos/271816/pexels-photo-271816.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Pristine Living Room After" class="after-image">
+                        <div class="slider-handle"><i class="fas fa-arrows-alt-h"></i></div>
+                    </div>
+                     <!-- Gallery Item 4: Carpet -->
+                    <div class="comparison-slider scroll-reveal">
+                        <div class="before-image">
+                            <img src="https://chetscleaning.com/wp-content/uploads/tile1.jpg" alt="Stained Carpet Before">
+                        </div>
+                        <img src=" " alt="Spotless Carpet After" class="after-image">
+                        <div class="slider-handle"><i class="fas fa-arrows-alt-h"></i></div>
                     </div>
                 </div>
             </div>
@@ -150,7 +577,7 @@
                 <div class="cta-content">
                     <h2 class="section-title">Ready for Your Sparkling Clean Home?</h2>
                     <p class="section-subtitle">Get an instant quote and book your professional cleaning in just a few clicks.</p>
-                    <a href="contact.html" class="btn btn-secondary">Book Now</a>
+                    <a href="#quote-section" class="btn btn-secondary book-now-scroll">Book Now</a>
                 </div>
             </div>
         </div>
