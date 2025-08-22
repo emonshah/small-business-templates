@@ -1,6 +1,6 @@
 {
   "name": "Sparkle Cleaning Template",
-  "folder": "sparkle-cleaning-template",
+  "folder": "cleaning/sparkle-cleaning-template",
   "category": "cleaning",
   "features": ["online booking", "responsive", "seo-friendly"],
   "layout": "multi",
