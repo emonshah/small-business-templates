@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Momentum Coaching - Premium Business Coaching</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #f4f4f4;
+            --text-primary: #2d3748;
+            --text-secondary: #4a5568;
+            --accent: #ff6b6b;
+            --white: #ffffff;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header */
+        header {
+            background: var(--white);
+            padding: 1.5rem 0;
+            box-shadow: var(--shadow);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 12rem 0 5rem;
+            background: linear-gradient(135deg, var(--white) 0%, var(--bg-color) 100%);
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 1.2rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .stars {
+            color: var(--accent);
+        }
+
+        /* Social Proof */
+        .social-proof {
+background: var(--white);
+padding: 3rem 0;
+text-align: center;
+border-top: 1px solid #e2e8f0;
+border-bottom: 1px solid #e2e8f0;
+}
+.social-proof h3 {
+color: var(--text-secondary);
+font-size: 1rem;
+font-weight: 500;
+margin-bottom: 2.5rem;
+text-transform: uppercase;
+letter-spacing: 1.5px;
+}
+.logos {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 4rem;
+flex-wrap: wrap;
+}
+.logo-item svg {
+height: 30px; /* Controls the height */
+width: auto; /* Maintains aspect ratio */
+fill: #A0AEC0; /* A subtle gray color */
+opacity: 0.8;
+transition: all 0.3s ease;
+}
+.logo-item:hover svg {
+opacity: 1;
+fill: var(--text-primary);
+}
+
+        /* Testimonials */
+        .testimonials {
+            padding: 5rem 0;
+        }
+
+        .testimonials h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        /* Booking Form */
+        .booking-form-section {
+            background: linear-gradient(135deg, var(--accent) 0%, #ff8e8e 100%);
+            color: white;
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .booking-form-section h2 {
+            margin-bottom: 1.5rem;
+        }
+
+        .booking-form-section > p {
+            max-width: 600px;
+            margin: 0 auto 3rem;
+            opacity: 0.9;
+        }
+
+        .form-container {
+            background: white;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1.2rem;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-primary);
+            color: white;
+            padding: 3rem 0 2rem;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .logos {
+                gap: 1.5rem;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                gap: 1.5rem;
+                text-align: center;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Momentum<span>Coaching</span></div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div>
+                    <h1>Unlock Your Business's True Potential</h1>
+                    <p>Get a proven, step-by-step action plan to increase your revenue. Personalized coaching for serious business owners.</p>
+                    <a href="#book-now" class="cta-button">Book Your Free Strategy Call</a>
+                    <div class="rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span>Rated 5/5 by 127+ business leaders</span>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Professional Business Coach" style="width: 100%; height: 400px; object-fit: cover; border-radius: 12px; box-shadow: var(--shadow);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="social-proof">
+        <div class="container">
+<h3>As Featured In</h3>
+<div class="logos">
+<!-- Forbes Logo -->
+<div class="logo-item" title="Forbes">
+<svg width="120" height="30" viewBox="0 0 254 41" xmlns="http://www.w3.org/2000/svg"><path d="M61.03 40.38L46.99 22.6V40.38H40.87V0.5H47.11L60.79 17.58V0.5H66.91V40.38H61.03ZM25.03 40.38V0.5H40.15V6.22H31.27V17.34H39.19V22.9H31.27V40.38H25.03ZM113.35 40.38V0.5H128.23C135.43 0.5 140.35 2.58 143.07 6.74C145.79 10.9 145.79 15.3 143.07 19.42C140.35 23.54 135.43 25.58 128.23 25.58H119.59V40.38H113.35ZM119.59 20.06H127.51C131.23 20.06 133.87 19.14 135.43 17.3C136.99 15.46 136.99 13.5 135.43 11.62C133.87 9.74 131.23 8.78 127.51 8.78H119.59V20.06ZM16.15 25.02L11.71 10.1H11.47L7.03 25.02H0.149998L6.87 0.5H16.31L23 25.02H16.15ZM103.15 40.38V0.5H109.39V40.38H103.15ZM83.95 40.38L70.03 22.68V40.38H63.91V0.5H70.15L83.65 17.58V0.5H89.77V40.38H83.95ZM168.19 40.38V0.5H192.31V6.22H174.43V17.34H185.71V22.9H174.43V34.66H193.03V40.38H168.19ZM213.55 25.02L209.11 10.1H208.87L204.43 25.02H197.55L204.27 0.5H213.71L220.43 25.02H213.55ZM222.19 40.38V0.5H228.43V40.38H222.19ZM253.15 40.38L244.75 27.42C247.99 25.58 250.15 22.94 251.23 19.5C252.31 16.06 252.31 12.58 251.23 9.1C250.15 5.62 247.99 2.98 244.75 1.18L253.15 0.5V40.38ZM234.67 22.9H242.23C244.55 21.54 246.07 19.5 246.79 16.78C247.51 14.06 247.51 11.38 246.79 8.66C246.07 5.94 244.55 3.9 242.23 2.54H234.67V22.9Z" fill="currentColor"></path></svg>
+</div>
+<!-- Entrepreneur Logo -->
+<div class="logo-item" title="Entrepreneur">
+<svg width="150" height="25" viewBox="0 0 208 25" xmlns="http://www.w3.org/2000/svg"><path d="M12.83 24.99V0.5H30.91V5.67H18.95V10.35H29.23V15.51H18.95V19.83H31.51V24.99H12.83ZM57.15 24.99V0.5H63.27V10.11L72.15 0.5H79.59L70.83 9.99L80.19 24.99H72.63L66.21 15.15L63.27 17.79V24.99H57.15ZM85.15 24.99V0.5H91.27V24.99H85.15ZM114.31 24.99V0.5H120.43V15.15L129.31 0.5H136.75L127.99 9.99L137.35 24.99H129.79L123.37 15.15L120.43 17.79V24.99H114.31ZM140.99 24.99V0.5H159.07V5.67H147.11V10.35H157.39V15.51H147.11V19.83H159.67V24.99H140.99ZM164.35 24.99V0.5H170.47V10.11L179.35 0.5H186.79L178.03 9.99L187.39 24.99H179.83L173.41 15.15L170.47 17.79V24.99H164.35ZM207.11 24.99V0.5H200.99V15.15L192.11 0.5H184.67L193.43 9.99L184.07 24.99H191.63L198.05 15.15L200.99 17.79V24.99H207.11Z" fill="currentColor"></path></svg>
+</div>
+<!-- Business Insider Logo -->
+<div class="logo-item" title="Business Insider">
+<svg width="60" height="50" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M24 0C10.74 0 0 10.74 0 24C0 37.26 10.74 48 24 48C37.26 48 48 37.26 48 24C48 10.74 37.26 0 24 0ZM24 44C12.96 44 4 35.04 4 24C4 12.96 12.96 4 24 4C35.04 4 44 12.96 44 24C44 35.04 35.04 44 24 44ZM22 20H26V36H22V20ZM14 20H18V36H14V20ZM30 20H34V36H30V20Z" fill="currentColor"></path></svg>
+</div>
+</div>
+</div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2>Success Stories</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Momentum Coaching helped me increase revenue by 300% in just 6 months. The strategic guidance was exactly what my business needed."</p>
+                    <div class="testimonial-author">
+                                                <img src="https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Michael Chen" class="author-avatar">
+                        <div>
+                            <h4>Michael Chen</h4>
+                            <p style="color: var(--accent); margin: 0;">CEO, TechStart Inc.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"The leadership development program completely transformed my approach to managing my team. I'm now more confident and effective."</p>
+                    <div class="testimonial-author">
+                                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Sarah Johnson" class="author-avatar">
+                        <div>
+                            <h4>Sarah Johnson</h4>
+                            <p style="color: var(--accent); margin: 0;">Founder, GrowthLab</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="booking-form-section" id="book-now">
+        <div class="container">
+            <h2>Ready for Your Breakthrough?</h2>
+            <p>Book your complimentary strategy session today. In 45 minutes, we'll identify your biggest growth opportunity.</p>
+            
+            <div class="form-container">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Business Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="website">Website URL</label>
+                        <input type="url" id="website">
+                    </div>
+                    <button type="submit" class="submit-btn">Book My Free Strategy Call</button>
+                </form>
+                <p style="margin-top: 1rem; color: var(--text-secondary); font-size: 0.9rem;">No obligation. No sales pitch.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo" style="color: white;">Momentum<span>Coaching</span></div>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Momentum Coaching. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll for CTA button
+        document.querySelector('.cta-button').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('#book-now').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+
+        // Form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you! We will contact you shortly to schedule your free strategy call.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
