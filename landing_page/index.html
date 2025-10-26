@@ -453,5 +453,29 @@ fill: var(--text-primary);
             this.reset();
         });
     </script>
+
+ <script>
+document.addEventListener("DOMContentLoaded", function() {
+  console.log("Simulating slow page load...");
+
+  // পুরো পেজটা প্রথমে লুকাও
+  document.body.style.opacity = "0.3";
+
+  // ৩ সেকেন্ড delay দাও (ইচ্ছা করলে 5000 = 5s করতে পারো)
+  setTimeout(() => {
+    document.body.style.opacity = "1";
+    console.log("Page visible after delay!");
+  }, 3000);
+
+  // Extra: একটা dummy CPU-heavy কাজ (blocking)
+  const start = performance.now();
+  while (performance.now() - start < 2000) {
+    // ২ সেকেন্ড ব্রাউজার ব্যস্ত থাকবে (simulated JS block)
+  }
+
+  console.log("CPU blocking simulated for 2s");
+});
+</script>
+
 </body>
 </html>
